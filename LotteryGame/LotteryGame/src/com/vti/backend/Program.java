@@ -8,8 +8,8 @@ import com.vti.dentity.Lottery;
 public class Program {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		 Lottery lottery = new Lottery();
+	     // TODO Auto-generated method stub
+	     Lottery lottery = new Lottery();
 	     lottery.setNumberRandom8(3,2,100);
 	     lottery.setNumberRandom7(3,3,1000);
 	     lottery.setNumberRandom6(9,4,10000);
