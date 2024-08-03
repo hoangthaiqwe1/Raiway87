@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\project\Baitap Excercise 5\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3907428612.index
+1765821362.index
+1066556435.index
+1844796531.index
+2788406419.index
+684423032.index
