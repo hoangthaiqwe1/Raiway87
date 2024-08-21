@@ -3,31 +3,62 @@ package com.vti.frontend;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
+import com.vti.backend.Servivce;
+import com.vti.entity.Department;
+import com.vti.entity.Position;
+import com.vti.entity.User;
 import com.vti.utils.JdbcConnection;
 
 public class Program {
 
 	public static void main(String[] args) throws FileNotFoundException, SQLException, IOException {
-		// TODO Auto-generated method stub
-		System.out.println("Thêm mới 3 phòng ban");
-		JdbcConnection.getOrInsertDepartment(1,"Kế toán");
-		JdbcConnection.getOrInsertDepartment(2,"IT planning");
-		JdbcConnection.getOrInsertDepartment(3,"HR");
-		System.out.println("====================================================");
-		System.out.println("Thêm mới 3 chức danh");
-		JdbcConnection.getOrInsertPosition(1,"Manager");
-		JdbcConnection.getOrInsertPosition(2,"Officer");
-		JdbcConnection.getOrInsertPosition(3,"Superviser");
-		System.out.println("====================================================");
-		System.out.println("Thêm mới 5 nhân viên");
-		JdbcConnection.insertUser("HoangThai", 2, 1);
-		JdbcConnection.insertUser("HoangThai", 2, 2);
-		JdbcConnection.insertUser("Minh Tú", 1, 2);
-		JdbcConnection.insertUser("Tuyết Ngân", 1, 1);
-		JdbcConnection.insertUser("Lý Hùng Linh", 3, 3);
-		System.out.println("====================================================");
-		System.out.println("Danh sách các nhân viên");
-		JdbcConnection.getAllUsersInfo();
+		Scanner scanner = new Scanner(System.in);
+        int choice;
+        while (true) {
+            menu();
+            System.out.print("Vui lòng chọn số chức năng tyển menu: ");
+            choice = scanner.nextInt();
+            scanner.nextLine();
+
+            try {
+                switch (choice) {
+                    case 1:
+                        Servivce.getOrInsertDepartment();
+                        break;
+                    case 2:
+                        Servivce.getOrInsertPosition();
+                        break;
+                    case 3:
+                        Servivce.insertUser();
+                        break;
+                    case 4:
+                        Servivce.getUsersList();
+                        break;
+                    case 5:
+                        System.out.println("Thoát ứng dụng thành công...");
+                        return;
+                    default:
+                        System.out.println("Dử liệu không hợp lệ, vui lòng nhập lại.");
+                        break;
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+	}
+	
+	public static void menu() {
+		System.out.println("---------- QUẢN LÝ DỬ LIỆU NHÂN VIÊN-----------");
+		System.out.println("1. Thêm hoặc lấy dử liệu phòng ban đã tồn tại");
+		System.out.println("2. Thêm hoặc lấy dử liệu chức danh đã tồn tại");
+		System.out.println("3. Thêm hoặc lấy dử liệu nhân viên đã tồn tại");
+		System.out.println("4. Hiện thị danh sách user");
+		System.out.println("5. Thoát ra khỏi ứng dụng");
+		System.out.println("---------- kết thúc -----------");
+		
 	}
 }
