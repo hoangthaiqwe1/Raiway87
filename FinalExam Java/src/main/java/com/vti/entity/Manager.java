@@ -27,7 +27,7 @@ public class Manager extends User{
 	}
 	
 	public String toString() {
-	    return "Manager [id=" + id + ", fullName=" + fullName + ", email=" + email + 
-	           ", expInYear=" + expInYear + ", projectId=" + projectId + "]";
+	    return "Manager [id= " + id + ", fullName= " + fullName + ", email= " + email + ", password= " + password +
+	           ", expInYea r=" + expInYear + ", projectId =" + projectId + "]";
 	}
 }

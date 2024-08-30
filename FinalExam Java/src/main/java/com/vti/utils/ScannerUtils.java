@@ -18,9 +18,14 @@ public class ScannerUtils {
 		}
 	}
 
-	public static String inputName(String msg) {
+	public static String inputEmail(String msg) {
 		System.out.println(msg);
-		return inputString("Please input a name, please input again.");
+		return inputString("Please input a email, please input again.");
+	}
+	
+	public static String inputPassword(String msg) {
+		System.out.println(msg);
+		return inputString("Please input a password, please input again.");
 	}
 
 	public static int inputIntChoice(String msg) {

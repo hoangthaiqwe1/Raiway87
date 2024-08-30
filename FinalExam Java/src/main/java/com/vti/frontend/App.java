@@ -35,8 +35,8 @@ public class App
     	App app = new App(); 
     	boolean isLoginSuccessful = false;
     	 while (!isLoginSuccessful) {
-             String email = ScannerUtils.inputName("Vui lòng nhập tên tài khoản là email: ");
-             String password = ScannerUtils.inputName("Vui lòng nhập mật khẩu đăng nhập: ");
+             String email = ScannerUtils.inputEmail("Vui lòng nhập tên tài khoản là email: ");
+             String password = ScannerUtils.inputPassword("Vui lòng nhập mật khẩu đăng nhập: ");
 
              isLoginSuccessful = usercontroller.checkLogin(email, password);
              if (!isLoginSuccessful) {
@@ -87,8 +87,6 @@ public class App
              }
          }
      }
-    
-    // Menu
 		  public static void menu() {
 				System.out.println("\n\n//---------- Menu -----------//\n ");
 				System.out.println("1. Nhập ID project cần tìm kiếm của employee ");
@@ -96,7 +94,7 @@ public class App
 				System.out.println("3. Đăng xuất tài khoản");
 				System.out.println("\n//---------- ~.~ -----------//");
 		
-			}
-   }
+		  }
+ 	}
 
 

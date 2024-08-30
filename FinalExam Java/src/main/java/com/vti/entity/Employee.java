@@ -22,7 +22,7 @@ public class Employee extends User {
 	}
 	
 	public String toString() {
-	    return "Employee [id=" + id + ", fullName=" + fullName + ", email=" + email + 
-	           ", projectId=" + projectId + ", proSkill=" + proSkill + "]";
+	    return "Employee [id= " + id + ", fullName= " + fullName + ", email= " + email +  ", password= " + password +
+	           ", projectId= " + projectId + ", proSkill= " + proSkill + "]";
 	}
 }
